@@ -9,14 +9,14 @@ function makebubble() {
   a.innerHTML = bubble;
 }
 
-var timer = 5;
+var timer = 60;
 function StartTimer() {
   var timerInt = setInterval(function () {
     if (timer > 0) {
       timer--;
     } else {
       clearInterval(timerInt);
-      document.querySelector('.panel-btn').innerHTML=`<h1>Game Over </h1>`;
+      document.querySelector(".panel-btn").innerHTML = `<h1>Game Over </h1>`;
     }
     var time = (document.querySelector(".timer").innerHTML = timer);
   }, 1000);
@@ -38,7 +38,6 @@ document.querySelector(".panel-btn").addEventListener("click", function (key) {
   var hitrecorded = Number(key.target.textContent);
   console.log(hitrecorded, hitnum);
   if (hitrecorded === hitnum) {
-   
     makebubble();
     HitGenerator();
     increaseScore();

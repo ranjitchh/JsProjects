@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+body,
+.snake {
+  background-color: #414141;
+  display: flex;
+  justify-content: space-around;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  margin: 5px;
+  background-color: #96d202;
+}
+.game-border-1 {
+  border: #595f43 solid 10px;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px #595f43;
+}
+.game-border-2 {
+  border: #abb78a solid 8px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #abb78a;
+}
+.game-border-3 {
+  border: #8b966c solid 30px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 5px #8b966c;
+}
+#instruction-text {
+  position: absolute;
+  bottom: 155px;
+  width: 300px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.scores{
+    display: flex;
+    justify-content: space-between;
+    padding:10px 20px;
+    color: #96d202;
+}
+#score{
+    color: #8b966c;
+}
+#high-score{
+ display: none;
+ color: #96d202;
+
+}
+img {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  top: 200px;
+}
+.snake{
+    border: #96d202 1px dotted;
+
+}
+.food{
+    border: #999 5px solid;
+    background-color: #dedede;
+}
+
+
+/* media queries  */
